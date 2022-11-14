@@ -1,0 +1,12 @@
+fileignoreconfig:
+- filename: components/event-list/index.tsx
+  checksum: 6321fed70f42774a6ff70330e6481dcb574f7e4c1115c8a322a00609aeb347a9
+- filename: components/events-search/index.tsx
+  checksum: 8529cfd6ef011ecefdbd7229c11f977a2b1d4acd09a657ad7ba003943bdf0b9a
+- filename: pages/events/[eventId].tsx
+  checksum: 91e484bc377a77e60c90457ba0d3b45672976bd6e85172ee9e54114c2b3de19b
+- filename: pages/index.tsx
+  checksum: 09a4143f9f2fcafd260297a22d0ea159c70cfc0dafa417f7d5f0514e66bb20a0
+- filename: yarn.lock
+  checksum: cbfeb2ee42fa58a6d7078220b982b83a0862c1475683c274b2ec32693061cfba
+version: "1.0"
