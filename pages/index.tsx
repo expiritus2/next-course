@@ -4,6 +4,7 @@ import EventList from '../components/event-list';
 import { GetStaticPropsResult } from 'next';
 import { getFeaturedEvents } from '../api/events';
 import { Event } from '../components/event-list';
+import NewsletterRegistration from '../components/input/newsletter-registration';
 
 type ComponentProps = {
     className: string;
@@ -18,6 +19,7 @@ const HomePage: FC<ComponentProps> = (props) => {
                 <title>NextJS Events</title>
                 <meta name="description" content="Find a lot of great events that allow you to evolve..." />
             </Head>
+            <NewsletterRegistration />
             <EventList items={events}/>
         </div>
     )

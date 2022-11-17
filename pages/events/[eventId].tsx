@@ -6,6 +6,7 @@ import { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } fro
 import { getEventById, getFeaturedEvents } from '../../api/events';
 import { Event } from '../../components/event-list';
 import Head from 'next/head';
+import Comments from '../../components/input/comments';
 
 type ComponentProps = {
     className?: string;
@@ -35,6 +36,7 @@ const EventDetailPage: FC<ComponentProps> = (props) => {
             <EventContent>
                 <p>{event.description}</p>
             </EventContent>
+            <Comments eventId={event.id} />
         </Fragment>
     );
 };
