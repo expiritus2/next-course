@@ -1,17 +1,16 @@
-import { FC, useContext } from 'react';
-
+import { createPortal } from 'react-dom';
+import { FC } from 'react';
+import { RequestStatus } from 'types/request';
 import styles from './index.module.css';
-import NotificationContext from 'store/notification-context';
 
 type ComponentProps = {
+    className?: string;
     title: string;
     message: string;
-    status: string;
-}
+    status: RequestStatus;
+};
 
 const Notification: FC<ComponentProps> = (props) => {
-    const notificationCtx = useContext(NotificationContext);
-
     const { title, message, status } = props;
 
     let statusClasses = '';
@@ -24,20 +23,14 @@ const Notification: FC<ComponentProps> = (props) => {
         statusClasses = styles.error;
     }
 
-    if (status === 'pending') {
-        statusClasses = styles.pending;
-    }
+    const cssClasses = `${styles.notification} ${statusClasses}`;
 
-    const activeClasses = `${styles.notification} ${statusClasses}`;
-
-    return (
-        <div
-            className={activeClasses}
-            onClick={notificationCtx.hideNotification}
-        >
+    return createPortal(
+        <div className={cssClasses}>
             <h2>{title}</h2>
             <p>{message}</p>
-        </div>
+        </div>,
+        document.getElementById('notifications') as Element
     );
 }
 

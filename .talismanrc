@@ -5,10 +5,14 @@ fileignoreconfig:
   checksum: 8529cfd6ef011ecefdbd7229c11f977a2b1d4acd09a657ad7ba003943bdf0b9a
 - filename: components/input/comment-list/index.tsx
   checksum: 6672e17a37cb484e445a53b9b38813c64ae4d922efafdf25f2468ed3c93d6d57
+- filename: components/posts/post-detail/post-content/index.tsx
+  checksum: 0badb4aa3708b8c4ed671d37b850dc0aa8c44430a6901245bd1f0a5599268ebe
+- filename: components/posts/posts-grid/index.tsx
+  checksum: f2165f3b878643a8bd49aab2c2b55c24b2867d907ca50c198037fcdc4780b641
 - filename: pages/events/[eventId].tsx
   checksum: 91e484bc377a77e60c90457ba0d3b45672976bd6e85172ee9e54114c2b3de19b
 - filename: pages/index.tsx
   checksum: 09a4143f9f2fcafd260297a22d0ea159c70cfc0dafa417f7d5f0514e66bb20a0
 - filename: yarn.lock
-  checksum: f04bccf839bea334d763c81559505d78181aaa53d14e43529e671a305581345f
+  checksum: 0ba37f877bed3e24d98201b33ad96b61f32278520c2c3a1910994d8a94c99d46
 version: "1.0"

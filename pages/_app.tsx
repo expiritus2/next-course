@@ -1,19 +1,16 @@
-import type { AppProps } from 'next/app'
-import '../styles/globals.scss'
-import Layout from '../components/layout/layout';
+import type { AppProps } from 'next/app';
+import { Layout } from 'components';
 import Head from 'next/head';
-import { NotificationContextProvider } from '../store/notification-context';
+
+import '../styles/globals.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <NotificationContextProvider>
-            <Layout>
-                <Head>
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width"></meta>
-                    <title></title>
-                </Head>
-                <Component {...pageProps} />
-            </Layout>
-        </NotificationContextProvider>
+        <Layout>
+            <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            </Head>
+            <Component {...pageProps} />
+        </Layout>
     )
 }

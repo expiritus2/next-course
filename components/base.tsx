@@ -5,7 +5,7 @@ type ComponentProps = {
 };
 
 const Base: FC<ComponentProps> = (props) => {
-    const { className } = props;
+    const {}  = props;
 
     return (
         <div>

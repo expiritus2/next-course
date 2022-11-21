@@ -1,7 +1,5 @@
-import React, { FC, Fragment, ReactNode, useContext } from 'react';
-import MainHeader from '../main-header';
-import Notification from 'components/ui/notification';
-import NotificationContext from 'store/notification-context';
+import React, { FC, Fragment, ReactNode } from 'react';
+import { MainNavigation } from 'components/index';
 
 type ComponentProps = {
     className?: string;
@@ -9,23 +7,12 @@ type ComponentProps = {
 };
 
 const Layout: FC<ComponentProps> = (props) => {
-    const notificationCtx = useContext(NotificationContext);
-
-    const activeNotification = notificationCtx.notification;
+    const { children }  = props;
 
     return (
         <Fragment>
-            <MainHeader />
-            <main>
-                {props.children}
-            </main>
-            {activeNotification && (
-                <Notification
-                    title={activeNotification.title}
-                    message={activeNotification.message}
-                    status={activeNotification.status}
-                />
-            )}
+            <MainNavigation />
+            <main>{children}</main>
         </Fragment>
     );
 };
